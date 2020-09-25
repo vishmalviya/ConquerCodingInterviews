@@ -173,12 +173,12 @@ int LIS(int a[], int n)
 
 /*
    Method 4 : Binary Search - Most Optimised Method
+   Time Complexity  : O(nlogn)
+   Space Complexity : O(n)
 */
 
 /* 
    Utility function to find index using binary search
-   Time Complexity  : O(nlogn)
-   Space Complexity : O(n)
 */
 int findIndex(int &a[],int low,int high,int key)
 {
