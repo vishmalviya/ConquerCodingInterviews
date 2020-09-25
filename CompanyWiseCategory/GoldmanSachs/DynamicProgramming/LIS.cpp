@@ -186,9 +186,9 @@ int findIndex(int &a[],int low,int high,int key)
         {
             int mid = (low+high)/2;
             if(arr[mid]>=key)
-            return (FindIndex(arr,low,mid,key));
+            return (findIndex(arr,low,mid,key));
             
-            return (FindIndex(arr,mid+1,high,key));
+            return (findIndex(arr,mid+1,high,key));
         }
         return high;
 }
@@ -205,7 +205,7 @@ int LIS(int a[], int n)
             if(a[i]>LIS[index-1])
                 LIS[index++]=a[i];
             else
-                LIS[FindIndex(LIS,0,index-1,a[i])]=a[i];
+                LIS[findIndex(LIS,0,index-1,a[i])]=a[i];
         }  
         return index;
 }
